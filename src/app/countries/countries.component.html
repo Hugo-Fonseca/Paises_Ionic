@@ -8,6 +8,9 @@
   <ion-searchbar style="margin-top: 2vh; margin-bottom: 1vh; color: white;"
     placeholder="Buscar país por nombre o región" (ionChange)="onBuscar($event)"></ion-searchbar>
 
+    <ion-button (click)="limpiarLogs()" fill="outline" color="danger">
+      Borrar Logs
+    </ion-button>
   <ion-grid>
     <ion-row style="display: flex; flex-direction: column; align-content: space-around;">
       <ion-col size="10" size-md="10" size-lg="6" *ngFor="let pais of paises | filtrarPaises: terminoBusqueda">
@@ -21,4 +24,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>
