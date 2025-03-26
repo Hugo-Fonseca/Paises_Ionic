@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DetailsCountriesComponent } from './details-countries/details-countries.component';
+import { CountriesComponent } from './countries/countries.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'paises',
+    loadComponent: () => import('./countries/countries.component').then(m => m.CountriesComponent)
+  },
+  {
+    path: 'paises/detalle/:nombrePais',
+    loadComponent: () => import('./details-countries/details-countries.component').then(m => m.DetailsCountriesComponent)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'paises',
     pathMatch: 'full'
   },
 ];

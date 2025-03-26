@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { CountriesService } from 'src/core/countries.service';
+import { CountriesService } from 'src/core/services/countries.service';
 
 @Component({
   selector: 'app-home',

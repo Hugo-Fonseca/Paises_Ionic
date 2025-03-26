@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Listado de Países</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar style="margin-top: 2vh; margin-bottom: 1vh; color: white;"
+    placeholder="Buscar país por nombre o región" (ionChange)="onBuscar($event)"></ion-searchbar>
+
+  <ion-grid>
+    <ion-row style="display: flex; flex-direction: column; align-content: space-around;">
+      <ion-col size="10" size-md="10" size-lg="6" *ngFor="let pais of paises | filtrarPaises: terminoBusqueda">
+        <ion-card style="display: flex; flex-direction: column;" (click)="irADetallePais(pais)">
+          <img [src]="pais.flags?.png" [alt]="pais.name?.common + ' bandera'">
+          <ion-card-header>
+            <ion-card-title>{{ pais.name?.common }}</ion-card-title>
+            <ion-card-subtitle>{{ pais.region }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
