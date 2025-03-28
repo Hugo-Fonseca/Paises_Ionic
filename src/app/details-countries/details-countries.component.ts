@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CountriesService } from 'src/core/services/countries.service';
-import { IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel} from "@ionic/angular/standalone";
+import { IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel, IonThumbnail} from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-details-countries',
   templateUrl: './details-countries.component.html',
   styleUrls: ['./details-countries.component.scss'],
-  imports: [IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel, CommonModule]
+  imports: [IonContent, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonList, IonItem, IonLabel, CommonModule, IonThumbnail, IonCardContent]
 })
 export class DetailsCountriesComponent  implements OnInit {
   pais: any;
