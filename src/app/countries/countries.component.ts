@@ -9,7 +9,7 @@ import { CountriesService } from 'src/core/services/countries.service';
   selector: 'app-countries',
   templateUrl: './countries.component.html',
   styleUrls: ['./countries.component.scss'],
-  imports: [IonCardSubtitle, IonGrid, IonCard, IonContent, IonRow, IonHeader, IonCardHeader, IonToolbar, IonTitle, IonCol, IonCardTitle, CommonModule, IonSearchbar, FilterCountriesPipe, SearchCountriesDirective]
+  imports: [IonCardSubtitle, IonGrid, IonCard, IonContent, IonRow, IonHeader, IonCardHeader, IonToolbar, IonTitle, IonCol, IonCardTitle, CommonModule, IonSearchbar, FilterCountriesPipe]
 })
 export class CountriesComponent  implements OnInit {
   paises: any[] = [];
